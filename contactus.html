@@ -181,29 +181,29 @@ Tsim Sha Tsui East, Kowloon, Hong Kong<br />
             </tr>
           <tr>
             <td height="30"><span class="content_txt">姓名</span> <span class="star_txt">*</span></td>
-            <td><form id="form1" name="form1" method="post" action="">
+            <td><form id="form1" name="form1" method="post" action="ajax.php"><input type="hidden" name="send_email" value="1"></input>
               <label>
-                <input type="text" name="textfield" id="textfield" />
+                <input type="text" name="name" id="textfield" />
                 </label>
-            </form>            </td>
+            </td>
             </tr>
           <tr>
             <td height="30"><span class="content_txt">電郵</span> <span class="star_txt">*</span></td>
-            <td><input type="text" name="textfield2" id="textfield2" /></td>
+            <td><input type="text" name="email" id="textfield2" /></td>
             </tr>
           
           
           <tr>
             <td class="content_txt">查詢內容</td>
-            <td><form id="form2" name="form2" method="post" action="">
+            <td>
               <label>
-                <textarea name="textarea" id="textarea" cols="45" rows="3"></textarea>
+                <textarea name="message" id="textarea" cols="45" rows="3"></textarea>
                 </label>
             </form>            </td>
             </tr>
           <tr>
             <td>&nbsp;</td>
-            <td height="42" align="left" valign="middle"><img src="images/btn_send.png" width="91" height="30" /></td>
+            <td height="42" align="left" valign="middle"><a href="javascript:form1_submit()"><img src="images/btn_send.png" width="91" height="30" /></a></td>
             </tr>
           <tr>
             <td colspan="4" background="images/img_bottom_border.png">&nbsp;</td>
@@ -224,5 +224,31 @@ Tsim Sha Tsui East, Kowloon, Hong Kong<br />
   </tr>
 </table>
 
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+function form1_submit(){
+  if($("#textfield").val()===""||$("#textfield2").val()===""){
+    alert("帶*號必須填寫!");
+  }
+  else{
+    $.ajax({
+      cache:false,
+      type:"POST",
+      url:"ajax.php",
+      data:$("#form1").serialize(),
+      dataType:"json",
+      error:function(msg){
+        alert("消息發送失敗 (錯誤信息:"+msg+")");
+      },
+      success:function(json){
+        $("#textfield").val("");
+        $("#textfield2").val("");
+        $("#textarea").val("");
+        alert(json.msg);
+      }
+    });
+  }
+}
+</script>
 </body>
 </html>
