@@ -41,7 +41,7 @@
             $mail->AltBody = 'To view the message, please use an HTML compatible email viewer.';
             $mail->MsgHTML ($body);
         }
-        $mail->AddAddress ('immaculate_co@foxmail.com', 'immaculate_co');
+        $mail->AddAddress ('540115739@qq.com', 'immaculate_co');
         $message = ($mail->Send() ? true : $mail->ErrorInfo);
         if (true === $message) {
             $ret['msg'] = '您的消息已發送';

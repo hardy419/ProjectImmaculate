@@ -149,9 +149,9 @@ function MM_swapImage() { //v3.0
             <td height="20" colspan="4" background="images/img_top_border.png">&nbsp;</td>
             </tr>
           <tr>
-            <td width="20" rowspan="10" background="images/img_middle_left.png">&nbsp;</td>
+            <td width="20" rowspan="11" background="images/img_middle_left.png">&nbsp;</td>
             <td height="200" colspan="2" valign="top" class="content2_txt"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1845.714121817856!2d114.17688552242086!3d22.299638235070503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ef0263e7bb%3A0xa0440dbbf5a4108a!2z5bCW5p2x5Yqg6YCj5aiB6ICB6YGTOTLomZ_lubjnpo_kuK3lv4M!5e0!3m2!1szh-TW!2shk!4v1430287727527" width="600" height="200" frameborder="0" style="border:0"></iframe></td>
-            <td width="20" rowspan="10" background="images/img_middle_right.png">&nbsp;</td>
+            <td width="20" rowspan="11" background="images/img_middle_right.png">&nbsp;</td>
           </tr>
           <tr>
             <td height="10" colspan="2" valign="top">&nbsp;</td>
@@ -203,10 +203,14 @@ Tsim Sha Tsui East, Kowloon, Hong Kong<br />
             </tr>
           <tr>
             <td>&nbsp;</td>
-            <td height="42" align="left" valign="middle"><a href="javascript:form1_submit()"><img src="images/btn_send.png" width="91" height="30" /></a></td>
+            <td height="37" align="left" valign="bottom"><a href="javascript:form1_submit()"><img src="images/btn_send.png" width="91" height="30" /></a></td>
             </tr>
           <tr>
-            <td colspan="4" background="images/img_bottom_border.png">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td height="35" align="left" valign="middle"><p class="content_txt" id="return_msg" style="color:#c00">&nbsp;</p></td>
+          </tr>
+          <tr>
+            <td height="20" colspan="4" background="images/img_bottom_border.png">&nbsp;</td>
             </tr>
         </table></td>
       </tr>
@@ -227,8 +231,9 @@ Tsim Sha Tsui East, Kowloon, Hong Kong<br />
 <script src="js/jquery-1.11.3.min.js"></script>
 <script>
 function form1_submit(){
+  $("#return_msg").html("發送中...");
   if($("#textfield").val()===""||$("#textfield2").val()===""){
-    alert("帶*號必須填寫!");
+    $("#return_msg").html("帶*號必須填寫!");
   }
   else{
     $.ajax({
@@ -238,13 +243,13 @@ function form1_submit(){
       data:$("#form1").serialize(),
       dataType:"json",
       error:function(msg){
-        alert("消息發送失敗 (錯誤信息:"+msg+")");
+        $("#return_msg").html("消息發送失敗 (錯誤信息:"+msg+")");
       },
       success:function(json){
         $("#textfield").val("");
         $("#textfield2").val("");
         $("#textarea").val("");
-        alert(json.msg);
+        $("#return_msg").html(json.msg);
       }
     });
   }
