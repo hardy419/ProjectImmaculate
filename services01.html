@@ -101,6 +101,7 @@ function MM_swapImage() { //v3.0
 </script>
 
 <script>
+/*
 function preload_images(){
   MM_preloadImages("images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg","images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg");
   var excludes="7986,7991,8003,8004,8006,8024";
@@ -111,6 +112,7 @@ function preload_images(){
     }
   }
 }
+*/
 </script>
 
 </head>
@@ -149,7 +151,21 @@ function preload_images(){
     </table></td>
   </tr>
   <tr>
-    <td height="20" colspan="2" valign="top">&nbsp;</td>
+    <td height="40" colspan="2" valign="center">
+      <div class="content2_txt" style="margin-left:280px;">
+        <a style="color:rgb(40,112,139)">地毯清潔</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services02.html" style="color:rgb(100,177,208)">滅蟲服務</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services06.html" style="color:rgb(100,177,208)">冷氣清潔</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services04.html" style="color:rgb(100,177,208)">雲石晶面處理</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services03.html" style="color:rgb(100,177,208)">膠地板護理</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services05.html" style="color:rgb(100,177,208)">玻璃窗清洗</a>
+      </div>
+    </td>
   </tr>
   <tr>
     <td height="480" colspan="2" valign="top"><table width="960" border="0" cellspacing="0" cellpadding="0">
@@ -211,8 +227,11 @@ function preload_images(){
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script>
-var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg"];
-var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg"];
+var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg"];
+var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png"];
+//var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg"];
+//var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg"];
+/*
 var excludes="7986,7991,8003,8004,8006,8024";
 var i=7979;for(i=7979;i<=8066;i++){
   if(-1==excludes.indexOf(i)){
@@ -220,6 +239,7 @@ var i=7979;for(i=7979;i<=8066;i++){
     pi_thumb.push("images/service/DSC_"+i+"[2].jpg");
   }
 }
+*/
 var offset=0;
 function change_pic(src){
   document.getElementById("service-iframe").src=src;

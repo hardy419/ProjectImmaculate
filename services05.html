@@ -135,7 +135,21 @@ function MM_swapImage() { //v3.0
     </table></td>
   </tr>
   <tr>
-    <td height="20" colspan="2" valign="top">&nbsp;</td>
+    <td height="40" colspan="2" valign="center">
+      <div class="content2_txt" style="margin-left:280px;">
+        <a href="services01.html" style="color:rgb(100,177,208)">地毯清潔</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services02.html" style="color:rgb(100,177,208)">滅蟲服務</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services06.html" style="color:rgb(100,177,208)">冷氣清潔</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services04.html" style="color:rgb(100,177,208)">雲石晶面處理</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a href="services03.html" style="color:rgb(100,177,208)">膠地板護理</a>
+        <span style="color:rgb(100,177,208)">&nbsp;·&nbsp;</span>
+        <a style="color:rgb(40,112,139)">玻璃窗清洗</a>
+      </div>
+    </td>
   </tr>
   <tr>
     <td height="480" colspan="2" valign="top"><table width="960" border="0" cellspacing="0" cellpadding="0">
@@ -146,12 +160,34 @@ function MM_swapImage() { //v3.0
             <td height="20" colspan="3" background="images/img_top_border.png">&nbsp;</td>
           </tr>
           <tr>
-            <td width="20" rowspan="2" background="images/img_middle_left.png">&nbsp;</td>
+            <td width="20" rowspan="4" background="images/img_middle_left.png">&nbsp;</td>
             <td height="40" align="left" valign="top" class="content2_txt"><strong class="title_txt">玻璃窗清洗</strong></td>
-            <td width="20" rowspan="2" background="images/img_middle_right.png">&nbsp;</td>
+            <td width="20" rowspan="4" background="images/img_middle_right.png">&nbsp;</td>
           </tr>
           <tr>
-            <td height="300" valign="top" class="content2_txt">窗戶在經過日積月累的洗禮，便會很容易形成一點點可見的污垢，無論是外觀抑或是效能亦會受到影響。但抹窗是一項極為危險工作，所以在清潔的同時，我們亦會為工人做好足夠的安全措施，如工人必須配戴安全帶，以減低傷害及避免意外發生。</td>
+            <td height="140" valign="top" class="content2_txt">窗戶在經過日積月累的洗禮，便會很容易形成一點點可見的污垢，無論是外觀抑或是效能亦會受到影響。但抹窗是一項極為危險工作，所以在清潔的同時，我們亦會為工人做好足夠的安全措施，如工人必須配戴安全帶，以減低傷害及避免意外發生。</td>
+          </tr>
+          <tr>
+            <td height="340" valign="top"><iframe id="service-iframe" width="600" height="330" src="" scrolling="no" frameborder="0" allowfullscreen></iframe></td>
+          </tr>
+          <tr>
+            <td height="75" valign="top" class="content2_txt">
+              <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="12"><a href="javascript:prev_next_pic(0)"><img src="images/larrow.png"></img></a></td>
+                  <td width="18">&nbsp;</td>
+                  <td width="120"><a href="javascript:change_pic('')"><img id="service-img-1" src="images/service/service_photo_s_1.png"></img></a></td>
+                  <td width="20"></td>
+                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_2.jpg')"><img id="service-img-2" src="images/service/service_photo_s_2.png"></img></a></td>
+                  <td width="20"></td>
+                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_3.jpg')"><img id="service-img-3" src="images/service/service_photo_s_3.png"></img></a></td>
+                  <td width="20"></td>
+                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_4.jpg')"><img id="service-img-4" src="images/service/service_photo_s_4.png"></img></a></td>
+                  <td width="18"></td>
+                  <td width="12"><a href="javascript:prev_next_pic(1)"><img src="images/rarrow.png"></img></a></td>
+                </tr>
+              </table>
+            </td>
           </tr>
           <tr>
             <td height="20" colspan="3" background="images/img_bottom_border.png">&nbsp;</td>
@@ -171,6 +207,43 @@ function MM_swapImage() { //v3.0
     <td align="right" class="top_address_txt">版權由淨潔工程有限公司所有 不得轉載</td>
   </tr>
 </table>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg"];
+var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png"];
+//var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg"];
+//var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg"];
+/*
+var excludes="7986,7991,8003,8004,8006,8024";
+var i=7979;for(i=7979;i<=8066;i++){
+  if(-1==excludes.indexOf(i)){
+    pi_src.push("images/service/DSC_"+i+".jpg");
+    pi_thumb.push("images/service/DSC_"+i+"[2].jpg");
+  }
+}
+*/
+var offset=0;
+function change_pic(src){
+  document.getElementById("service-iframe").src=src;
+}
+function refresh_photolist(){
+  for(list_i=1;list_i<=4;++list_i){
+    $("#service-img-"+list_i).attr("src",pi_thumb[offset+list_i-1])
+      .parent().attr("href","javascript:change_pic('"+pi_src[offset+list_i-1]+"')");
+  }
+}
+function prev_next_pic(dir){
+  if(0===dir && offset>0){
+    --offset;
+    refresh_photolist();
+  }
+  else if(1===dir && offset<pi_src.length-4){
+    ++offset;
+    refresh_photolist();
+  }
+}
+</script>
 
 </body>
 </html>
