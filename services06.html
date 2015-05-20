@@ -168,7 +168,7 @@ function MM_swapImage() { //v3.0
             <td height="140" valign="top" class="content2_txt">我們一直以優惠合理的價錢提供冷氣清洗服務，而我們的員工更具備專業知識及技術，全心全意為您做好每一項服務。</td>
           </tr>
           <tr>
-            <td height="340" valign="top"><iframe id="service-iframe" width="600" height="330" src="https://www.youtube.com/embed/J2x_O6vZdtQ" scrolling="no" frameborder="0" allowfullscreen></iframe></td>
+            <td height="340" valign="top"><iframe id="service-iframe" width="600" height="330" src="" scrolling="no" frameborder="0" allowfullscreen></iframe></td>
           </tr>
           <tr>
             <td height="75" valign="top" class="content2_txt">
@@ -176,13 +176,13 @@ function MM_swapImage() { //v3.0
                 <tr>
                   <td width="12"><a href="javascript:prev_next_pic(0)"><img src="images/larrow.png"></img></a></td>
                   <td width="18">&nbsp;</td>
-                  <td width="120"><a href="javascript:change_pic('https://www.youtube.com/embed/J2x_O6vZdtQ')"><img id="service-img-1" src="images/service/service_video_6.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-1" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_2.jpg')"><img id="service-img-2" src="images/service/service_photo_s_2.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-2" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_3.jpg')"><img id="service-img-3" src="images/service/service_photo_s_3.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-3" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_4.jpg')"><img id="service-img-4" src="images/service/service_photo_s_4.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-4" src=""></img></a></td>
                   <td width="18"></td>
                   <td width="12"><a href="javascript:prev_next_pic(1)"><img src="images/rarrow.png"></img></a></td>
                 </tr>
@@ -210,19 +210,21 @@ function MM_swapImage() { //v3.0
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script>
-var pi_src=["https://www.youtube.com/embed/J2x_O6vZdtQ","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg"];
-var pi_thumb=["images/service/service_video_6.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png"];
+//var pi_src=["https://www.youtube.com/embed/J2x_O6vZdtQ"];
+var pi_src=["https://www.youtube.com/embed/KfB_HXrtQ6Q"];
+var pi_thumb=["images/service/service_video_6.png"];
 //var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg"];
 //var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg"];
-/*
-var excludes="7986,7991,8003,8004,8006,8024";
-var i=7979;for(i=7979;i<=8066;i++){
-  if(-1==excludes.indexOf(i)){
-    pi_src.push("images/service/DSC_"+i+".jpg");
-    pi_thumb.push("images/service/DSC_"+i+"[2].jpg");
+
+var includes=[1641,1642,1643,1644,20100804];
+var excludes="";
+var i;for(i=0;i<includes.length;i++){
+  if(-1==excludes.indexOf(""+includes[i])){
+    pi_src.push("images/service/6/DSC_" + includes[i] + ".jpg");
+    pi_thumb.push("images/service/6/DSC_" + includes[i] + "[2].jpg");
   }
 }
-*/
+
 var offset=0;
 function change_pic(src){
   document.getElementById("service-iframe").src=src;
@@ -243,6 +245,10 @@ function prev_next_pic(dir){
     refresh_photolist();
   }
 }
+$(function(){
+  change_pic(pi_src[0]);
+  refresh_photolist();
+  });
 </script>
 
 </body>

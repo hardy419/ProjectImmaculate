@@ -185,7 +185,7 @@ function preload_images(){
               為去除因使用地毯帶來的各種問題，我們會採用潔力最佳的方法清洗地毯，致力維持地毯的外觀，繼續享受那種高貴的優雅的象徵。</td>
           </tr>
           <tr>
-            <td height="340" valign="top"><iframe id="service-iframe" width="600" height="330" src="https://www.youtube.com/embed/TnkrhdXOz3Y" scrolling="no" frameborder="0" allowfullscreen></iframe></td>
+            <td height="340" valign="top"><iframe id="service-iframe" width="600" height="330" src="" scrolling="no" frameborder="0" allowfullscreen></iframe></td>
           </tr>
           <tr>
             <td height="75" valign="top" class="content2_txt">
@@ -193,13 +193,13 @@ function preload_images(){
                 <tr>
                   <td width="12"><a href="javascript:prev_next_pic(0)"><img src="images/larrow.png"></img></a></td>
                   <td width="18">&nbsp;</td>
-                  <td width="120"><a href="javascript:change_pic('https://www.youtube.com/embed/TnkrhdXOz3Y')"><img id="service-img-1" src="images/service/service_photo_s_1.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-1" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_2.jpg')"><img id="service-img-2" src="images/service/service_photo_s_2.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-2" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_3.jpg')"><img id="service-img-3" src="images/service/service_photo_s_3.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-3" src=""></img></a></td>
                   <td width="20"></td>
-                  <td width="120"><a href="javascript:change_pic('images/service/service_photo_4.jpg')"><img id="service-img-4" src="images/service/service_photo_s_4.png"></img></a></td>
+                  <td width="120"><a href=""><img id="service-img-4" src=""></img></a></td>
                   <td width="18"></td>
                   <td width="12"><a href="javascript:prev_next_pic(1)"><img src="images/rarrow.png"></img></a></td>
                 </tr>
@@ -227,19 +227,21 @@ function preload_images(){
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script>
-var pi_src=["https://www.youtube.com/embed/TnkrhdXOz3Y","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg"];
-var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png"];
+//var pi_src=["https://www.youtube.com/embed/TnkrhdXOz3Y"];
+var pi_src=["https://www.youtube.com/embed/c2c9dyoKgso"];
+var pi_thumb=["images/service/service_photo_s_1.png"];
 //var pi_src=["","images/service/service_photo_2.jpg","images/service/service_photo_3.jpg","images/service/service_photo_4.jpg","images/service/service_photo_5.jpg","images/service/service_photo_6.jpg"];
 //var pi_thumb=["images/service/service_photo_s_1.png","images/service/service_photo_s_2.png","images/service/service_photo_s_3.png","images/service/service_photo_s_4.png","images/service/service_photo_s_5.jpg","images/service/service_photo_s_6.jpg"];
-/*
-var excludes="7986,7991,8003,8004,8006,8024";
-var i=7979;for(i=7979;i<=8066;i++){
-  if(-1==excludes.indexOf(i)){
-    pi_src.push("images/service/DSC_"+i+".jpg");
-    pi_thumb.push("images/service/DSC_"+i+"[2].jpg");
+
+var includes=[1712,1713,1714,1715,7981,7983,7987,7989,7990,7992,7994,7995,7996,7997,7998,8000,8002,8003,8006,8021,8023,8025,8027,8028,8031];
+var excludes="";
+var i;for(i=0;i<includes.length;i++){
+  if(-1==excludes.indexOf(""+includes[i])){
+    pi_src.push("images/service/1/DSC_" + includes[i] + ".jpg");
+    pi_thumb.push("images/service/1/DSC_" + includes[i] + "[2].jpg");
   }
 }
-*/
+
 var offset=0;
 function change_pic(src){
   document.getElementById("service-iframe").src=src;
@@ -260,6 +262,11 @@ function prev_next_pic(dir){
     refresh_photolist();
   }
 }
+$(function(){
+  change_pic(pi_src[0]);
+  refresh_photolist();
+  });
+
 </script>
 
 </body>

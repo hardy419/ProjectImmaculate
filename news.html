@@ -142,7 +142,9 @@ function MM_swapImage() { //v3.0
             </tr>
           <tr>
             <td width="20" background="images/img_middle_left.png">&nbsp;</td>
-            <td height="600" valign="top">&nbsp;</td>
+            <td height="600" valign="top">
+              <div class="fb-like-box" data-href="https://www.facebook.com/projectimmaculate" data-width="600" data-height="600" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+            </td>
             <td width="20" background="images/img_middle_right.png">&nbsp;</td>
           </tr>
           <tr>
@@ -163,6 +165,19 @@ function MM_swapImage() { //v3.0
     <td align="right" class="top_address_txt">版權由淨潔工程有限公司所有 不得轉載</td>
   </tr>
 </table>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    (function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1599005260358510&version=v2.3";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+});
+</script>
 
 </body>
 </html>
